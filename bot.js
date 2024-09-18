@@ -1,9 +1,9 @@
-const { WebSocketprovider, Contract } = require("ethers");
+const { WebSocketProvider, Contract } = require("ethers");
 require("dotenv").config();
-const blockchain = require("./blockchain.jsons");
+const blockchain = require("./blockchain.json");
 
 //const provider  = new WebSocketprovider('wss://mainnet.infura.io/ws/v3/YOUR_INFURA_PROJECT_ID');
-const provider = new WebSocketprovider(process.env.LOCAL_RPC_URLS_WS);
+const provider = new WebSocketProvider(process.env.LOCAL_RPC_URL_WS);
 const factory = new Contract(
   blockchain.factoryAddress,
   blockchain.factoryAbi,
