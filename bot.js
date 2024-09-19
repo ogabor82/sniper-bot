@@ -2,7 +2,6 @@ const { WebSocketProvider, Wallet, Contract } = require("ethers");
 require("dotenv").config();
 const blockchain = require("./blockchain.json");
 const fs = require("fs");
-const { parse } = require("path");
 
 //const provider  = new WebSocketprovider('wss://mainnet.infura.io/ws/v3/YOUR_INFURA_PROJECT_ID');
 const provider = new WebSocketProvider(process.env.LOCAL_RPC_URL_WS);
